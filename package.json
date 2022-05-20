@@ -1,14 +1,7 @@
 {
-  "name": "@xmartlabs/react-native-line",
+  "name": "@ballza95/react-native-line-ex",
   "description": "React Native Line wrapper",
-  "author": "XmartLabs <hi@xmartlabs.com>",
-  "contributors": [
-    "Emiliano Botti <emiliano@xmartlabs.com>",
-    "Joaquin Aguirre <joaquin.aguirre@xmartlabs.com>",
-    "Santiago Fernandez <santiagofm@xmartlabs.com>",
-    "Nicolás Hernández <nicolas@xmartlabs.com>",
-    "Marco Fiorito <marco@xmartlabs.com>"
-  ],
+  "author": "ballza95",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "version": "2.1.0",
@@ -61,5 +54,8 @@
     "ios",
     "RNLine.podspec",
     "README.md"
-  ]
+  ],
+  "directories": {
+    "example": "example"
+  }
 }
