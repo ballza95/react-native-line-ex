@@ -33,7 +33,7 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   
-  [LineLogin setupWithChannelID:@"1626112874" universalLinkURL:nil];
+  [LineLogin setupWithChannelID:@"1655549184" universalLinkURL:nil];
   
   return YES;
 }
