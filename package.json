@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "version": "2.1.0",
-  "homepage": "https://github.com/xmartlabs/react-native-line#readme",
+  "homepage": "https://github.com/ballza95/react-native-line-ex",
   "keywords": [
     "react-native",
     "react",
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh:git@github.com:xmartlabs/react-native-line.git"
+    "url": "https://github.com/ballza95/react-native-line-ex.git"
   },
   "files": [
     "dist/",
