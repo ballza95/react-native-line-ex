@@ -10,8 +10,6 @@ import Foundation
 import LineSDK
 
 @objc(LineLogin) public class LineLogin: NSObject {
-
-  private static let shared = LoginManager()
   
   // Setup to be called in AppDelegate
   @objc public static func setup(channelID: String, universalLinkURL: URL?) {
