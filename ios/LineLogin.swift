@@ -11,22 +11,19 @@ import LineSDK
 
 @objc(LineLogin) public class LineLogin: NSObject {
   
-  //
-  // Setup the plugin using your CHANNEL_ID when the app finishes launching
-  //
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      LineLogin.setup(channelID: "1655549184", universalLinkURL: nil)
-
-      return true
+  // Setup to be called in AppDelegate
+  @objc public static func setup(channelID: String, universalLinkURL: URL?) {
+    return LoginManager.shared.setup(channelID: "1655549184", universalLinkURL: universalLinkURL)
   }
-
-  //
-  // Handle redirection back to the app from Line
-  //
-  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-      return LineLogin.application(app, open: url, options: options)
+  
+  @objc public static func application(
+    _ application: UIApplication,
+    open url: URL,
+    options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool
+  {
+    return LoginManager.shared.application(application, open: url, options: options)
   }
-
+  
   @objc public static func application(
     _ application: UIApplication,
     continue userActivity: NSUserActivity,
