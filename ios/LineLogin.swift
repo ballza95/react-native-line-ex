@@ -13,7 +13,7 @@ import LineSDK
   
   // Setup to be called in AppDelegate
   @objc public static func setup(channelID: String, universalLinkURL: URL?) {
-    return LoginManager.shared.setup(channelID: "1655549184", universalLinkURL: universalLinkURL)
+    return LoginManager.setup(channelID: "1655549184", universalLinkURL: universalLinkURL)
   }
   
   @objc public static func application(
@@ -21,7 +21,7 @@ import LineSDK
     open url: URL,
     options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool
   {
-    return LoginManager.shared.application(application, open: url, options: options)
+    return LoginManager.application(application, open: url, options: options)
   }
   
   @objc public static func application(
@@ -29,7 +29,7 @@ import LineSDK
     continue userActivity: NSUserActivity,
     restorationHandler: @escaping ([Any]) -> Void) -> Bool
   {
-    return LoginManager.shared.application(application, open: userActivity.webpageURL)
+    return LoginManager.application(application, open: userActivity.webpageURL)
   }
 
   // Interface to be used by React Native
@@ -56,7 +56,7 @@ import LineSDK
     }
     
     DispatchQueue.main.async {
-        LoginManager.shared.login(
+        LoginManager.login(
           permissions: Set(scopes),
           in: nil,
           parameters: parameters) { result in
@@ -70,7 +70,7 @@ import LineSDK
 
   @objc func logout(_ resolve: @escaping RCTPromiseResolveBlock,
                     rejecter reject: @escaping RCTPromiseRejectBlock) {
-    LoginManager.shared.logout { result in
+    LoginManager.logout { result in
       switch result {
       case .success: resolve(nil)
       case .failure(let error): error.rejecter(reject)
@@ -80,7 +80,7 @@ import LineSDK
 
   @objc func getCurrentAccessToken(_ resolve: @escaping RCTPromiseResolveBlock,
                                    rejecter reject: @escaping RCTPromiseRejectBlock) {
-    if let token = AccessTokenStore.shared.current {
+    if let token = AccessTokenStore.current {
       token.resolver(resolve, reject, name: "access token")
     }else{
       reject("Error getting access token",
