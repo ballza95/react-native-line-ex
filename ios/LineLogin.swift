@@ -13,7 +13,7 @@ import LineSDK
   
   // Setup to be called in AppDelegate
   @objc public static func setup(channelID: String, universalLinkURL: URL?) {
-    return LoginManager.shared.setup(channelID: @"1655549184", universalLinkURL: universalLinkURL)
+    return LoginManager.shared.setup(channelID: "1655549184", universalLinkURL: universalLinkURL)
   }
   
   @objc public static func application(

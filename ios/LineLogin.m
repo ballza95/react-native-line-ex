@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "React/RCTBridgeModule.h"
+#import "LineLogin.h"
+#import "LineSetup.h"
 
 @interface RCT_EXTERN_MODULE(LineLogin, NSObject)
   RCT_EXTERN_METHOD(login: (NSDictionary *)arguments
