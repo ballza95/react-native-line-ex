@@ -4,7 +4,7 @@
   "author": "ballza95",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "homepage": "https://github.com/ballza95/react-native-line-ex",
   "keywords": [
     "react-native",

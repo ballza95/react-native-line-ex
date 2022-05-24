@@ -11,7 +11,6 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
-#import "AppDelegate.h"
 #import "RNLine-Swift.h"
 
 
